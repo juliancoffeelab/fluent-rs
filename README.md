@@ -10,6 +10,12 @@ Project Fluent keeps simple things simple and makes complex things possible.
 The syntax used for describing translations is easy to read and understand.
 At the same time it allows, when necessary, to represent complex concepts from natural languages like gender, plurals, conjugations, and others.
 
+## Acknowledgements
+
+Source location span support in `fluent-syntax` and `fluent-bundle` originates from [PR #373](https://github.com/projectfluent/fluent-rs/pull/373) by [Ertanic](https://github.com/Ertanic).
+
+This branch adds a small follow-up from `fluent-lsp`'s vendored integration: one extra span regression test, one test ignore for known span round-trip drift, and one local lint suppression to keep the vendored signature unchanged for now.
+
 ## Packages
 
 This workspace contains the following crates:
