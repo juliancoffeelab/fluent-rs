@@ -3,6 +3,9 @@
 use fluent_syntax::ast::{Entry, Expression, PatternElement, VariantKey};
 use fluent_syntax::parser::parse;
 
+// These regressions pin the byte ranges that editor integrations care about:
+// variant keys should cover only the key text, while variant spans should cover
+// the whole branch, including the default marker.
 #[test]
 fn variant_key_spans_slice_only_the_key_contents() {
     let source = "msg = { $count ->\n    [0] Zero\n    [one] One\n   *[other] Other\n}\n";
